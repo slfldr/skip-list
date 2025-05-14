@@ -1,5 +1,6 @@
 #include "gtest.h"
 #include "skip_list.h"
+#include <climits>
 
 TEST(SkipListTest, InsertAndFind)
 {
