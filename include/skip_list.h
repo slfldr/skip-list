@@ -36,7 +36,7 @@ private:
     {
         int level = 0;
         
-        while (((float)rand() / RAND_MAX) < probability && level < maxLevel - 1)
+        while (((float)rand() / RAND_MAX) < probability && level <= maxLevel - 1)
         {
             level++;
         }
@@ -102,6 +102,11 @@ public:
             {
                 current = current->down;
             }
+        }
+
+        if (update[0]->next && update[0]->next->value == value)
+        {
+            return;
         }
 
         int newLevel = randomLevel();
